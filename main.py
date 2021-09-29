@@ -1,6 +1,6 @@
 import pygame
-import math
 import random
+import math
 
 # setup display
 pygame.init()
@@ -33,20 +33,26 @@ for i in range(7):
 
 # game variables
 hangman_status = 0
-words = ["IDE", "REPLIT", "PYTHON", "PYGAME","TEAMS","FRUIT","JAZZ","WEIRD","CEMETERY","HANGMAN"]
+words = ["CHOICE", "WORD", "NAME", "COUNTY","TEAMS","FRUIT","JAZZ","WEIRD","CEMETERY","HANGMAN"]
 word = random.choice(words)
 guessed = []
 
 # colors
 WHITE = (255,255,255)
 BLACK = (0,0,0)
+RED = (220,20,60)
+BLUE = 	(30,144,255)
 
-def draw():
+#def is the keyword for defining a function. 
+
+def draw():#Draw several simple shapes to a surface.
     win.fill(WHITE)
 
     # draw title
-    text = TITLE_FONT.render("HANGMAN", 1, BLACK)
+    text = TITLE_FONT.render("HANGMAN", 1, RED)
     win.blit(text, (WIDTH/2 - text.get_width()/2, 20))
+    #blit() — blit stands for Block Transfer—and it's going to 
+    #copy the contents of one Surface onto another Surface.
     
 
     # draw word
@@ -63,17 +69,20 @@ def draw():
     for letter in letters:
         x, y, ltr, visible = letter
         if visible:
-            pygame.draw.circle(win, BLACK, (x, y), RADIUS, 3)
-            text = LETTER_FONT.render(ltr, 1, BLACK)
+            pygame.draw.circle(win, RED, (x, y), RADIUS, 3)
+            text = LETTER_FONT.render(ltr, 1, BLACK)#1 here is used for removing the rough edges(anti-aliasing)
             win.blit(text, (x - text.get_width()/2, y - text.get_height()/2))
 
-    win.blit(images[hangman_status], (520, 280))
-    pygame.display.update()
+    win.blit(images[hangman_status], (520, 280))#display hangman images
+    pygame.display.update()#update() to make the display Surface actually appear on the user's monitor. 
+
+
 
 def main():
     global hangman_status
 
-    FPS = 60
+    FPS = 60 # Frames per second.This Clock object will ensure that our game programs 
+                #don't run too fast by putting in small pauses on each iteration of the game loop.
     clock = pygame.time.Clock()
     run = True
 
