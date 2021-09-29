@@ -70,14 +70,6 @@ def draw():
     win.blit(images[hangman_status], (520, 280))
     pygame.display.update()
 
-def display_message(message):
-    pygame.time.delay(1000)
-    win.fill(WHITE)
-    text = WORD_FONT.render(message, 1, BLACK)
-    win.blit(text, (WIDTH/2 - text.get_width()/2, HEIGHT/2 - text.get_height()/2))
-    pygame.display.update()
-    pygame.time.delay(3000)
-
 def main():
     global hangman_status
 
