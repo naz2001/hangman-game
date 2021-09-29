@@ -113,11 +113,11 @@ def main():
         
         if won:
             screen = pygame.display.set_mode((700, 500))
-            TPImage = pygame.image.load("imagewon.png")
+            WonImage = pygame.image.load("imagewon.png")
             # coordinates of the image
             x = 0
             y = 0
-            screen.blit(TPImage, (x, y))
+            screen.blit(WonImage, (x, y))
             # paint screen one time
             pygame.display.flip()
             running = True
@@ -129,11 +129,11 @@ def main():
 
         if hangman_status == 6:
             screen = pygame.display.set_mode((700, 500))
-            WonImage = pygame.image.load("imagelost.png")
+            LostImage = pygame.image.load("imagelost.png")
             # coordinates of the image
             x = 0
             y = 0
-            screen.blit(WonImage, (x, y))
+            screen.blit(LostImage, (x, y))
             # paint screen one time
             pygame.display.flip()
             running = True
