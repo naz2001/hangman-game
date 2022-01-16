@@ -18,6 +18,12 @@
 Hangman is a classic letter guessing game. You are shown a set of blank letters that match a word and you have to guess what these letters are to reveal the hidden word. You guess by picking letters from those displayed on the sides. If you pick a letter that is in the word, that letter is revealed from the blank letters; however, if you pick a letter that is not in the word, then a stickman is slowly drawn. With each wrong letter guess, the man is drawn more and more. When the man is finished, he is hung and the game is lost. This is why the game is called 'Hangman'. If you can reveal all the letters in the word before the man is hung then you have won the game.
 </p>
 
+<p align="center">
+<img src= "https://user-images.githubusercontent.com/57052959/149654040-782b9841-d569-4f52-a645-aa8d76011692.JPG"  alt="Intro1">
+<h6 align="center">This figure above shows that the player has lost this game as the stickman has been completely drawn before all the letters could be guessed.</h6>
+</p>
+
+
 ## Documentation
 
 <p align="justify"> 
