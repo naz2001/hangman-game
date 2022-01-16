@@ -33,12 +33,17 @@ for i in range(7):
 
 # game variables
 hangman_status = 0
-words = ["CHOICE", "WORD", "NAME", "COUNTY","TEAMS","FRUIT","JAZZ","WEIRD","CEMETERY","HANGMAN"]
+words = ["CHOICE", "WORD", "NAME", "COUNTY","TEAMS","FRUIT","JAZZ","WEIRD","CEMETERY","HANGMAN","NOTEBOOK","HELLO","HACKING",
+"MICROWAVE","AIRPORT","STATION","ANIMAL","BIRD","ARTICLE","AUTHOR","BALANCE","BATTLE","BILLION","MILLION","BIRTHDAY","BREAKFAST",
+"BUSINESS","CARBON","CHOCOLATE","CHRISTMAS","CULTURE","DESTRUCTION","DIALOGUE","DIRECTION","DISCOVERY","ECONOMY","EVOLUTION",
+"EXPERIMENT","FABRIC","FAITH","COMPUTER","GHOST","MARKET","MAKEUP","MESSAGE","MODERN","MOUNTAIN","PICTURE","POLLUTION","PRICE",
+"PRODUCE","PUNISH","RADICAL","RECIPE","RELATION","SCIENCE","SORRY","TEACHER","TOBACCO","TRAFFIC","UNIQUE","VIRUS","WEAPON","YOUNG"]
+
 word = random.choice(words)
 guessed = []
 
 # colors
-WHITE = (255,255,255)
+WHITE = (245,245,245)
 BLACK = (0,0,0)
 RED = (220,20,60)
 BLUE = 	(30,144,255)
@@ -81,8 +86,7 @@ def draw():#Draw several simple shapes to a surface.
 def main():
     global hangman_status
 
-    FPS = 60 # Frames per second.This Clock object will ensure that our game programs 
-                #don't run too fast by putting in small pauses on each iteration of the game loop.
+    FPS = 60 # Frames per second.This Clock object will ensure that our game programs don't run too fast by putting in small pauses on each iteration of the game loop.
     clock = pygame.time.Clock()
     run = True
 
@@ -113,6 +117,7 @@ def main():
                 break
         
         if won:
+            pygame.time.wait(2000)
             screen = pygame.display.set_mode((700, 500))
             WonImage = pygame.image.load("imagewon.png")
             # coordinates of the image
@@ -129,6 +134,7 @@ def main():
                     break
 
         if hangman_status == 6:
+            pygame.time.wait(2000)
             screen = pygame.display.set_mode((700, 500))
             LostImage = pygame.image.load("imagelost.png")
             # coordinates of the image
