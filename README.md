@@ -27,5 +27,5 @@ Hangman is a classic letter guessing game. You are shown a set of blank letters 
 ## Documentation
 
 <p align="justify"> 
-This project is written using Python 3.9.7 and Pygame 2.0.1. There a few COMMON words included in the 'words' list and this can be changes according to your preference. The canvas display size is 700 x 500 (WIDTH x HEIGHT). 
+This project is written using Python 3.9.7 and Pygame 2.0.1. There a few COMMON words included in the 'words' list and this can be changed according to your preference. The canvas display size is 700 x 500 (WIDTH x HEIGHT). 
 </p>
